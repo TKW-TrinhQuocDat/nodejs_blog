@@ -6,14 +6,15 @@ const morgan = require('morgan');
 const hand = require("express-handlebars");
 const port = 3000;
 
-
+const route = require('./routes');
 
 app.use(express.static(path.join(__dirname, "public")));
-console.log(path.join(__dirname, "public"))
-
-
+app.use(express.urlencoded({
+  extended: true
+}));
+app.use(express.json());
 // http login
-app.use(morgan('combined'))
+//app.use(morgan('combined'))
 // template engine
 app.engine('hbs', hand.engine({
   extname: '.hbs',
@@ -24,15 +25,11 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources/views'));
 
 
-console.log("path " + __dirname + '/resources/views')
 
-app.get('/', (req, res) => {
-  res.render('home');
-});
+// route init
+route(app);
 
-app.get('/news', (req, res) => {
-  res.render('news');
-});
+
 
 app.listen(port, () => {
   console.log(`Example app listening http://localhost:${port}`)

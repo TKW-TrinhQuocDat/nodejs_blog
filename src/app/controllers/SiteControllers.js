@@ -1,16 +1,16 @@
-class NewsControllers{
+class SiteControllers{
 
-    // [GET] /news
-    index(req, res){
-        res.render('news');
+    // [GET] /
+    home(req, res){
+        res.render('home');
     }
 
-    //[get] /news/:slup
-    show(req, res){
-        res.send("show detail!!");
+    //[get] /search
+    search(req, res){
+        res.render('search');
     }
 
 
 }
 
-module.exports = new NewsControllers;
+module.exports = new SiteControllers;

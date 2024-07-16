@@ -1,0 +1,30 @@
+<div class="container">
+    <h1>Chỉnh sửa bài đăng</h1>
+
+    <table class="table">
+        <thead >
+            <tr>
+            <th scope="col">Stt</th>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col" colspan="2">Time</th>
+            
+            </tr>
+        </thead>
+        <tbody class="mt-4">
+            {{#each nhac}}
+            <tr>
+                <th scope="row">{{sum @index 1}}</th>
+                <td><img src="{{this.image}}" alt="Anh nhac" class="stored-img"></td>
+                <td>{{this.name}}</td>
+                <td>{{this.createdAt}}</td>
+                <td>
+                    <a href="/nhac/{{this._id}}/edit" class="btn btn-dark">Sửa</a>
+                    <a href="" class="btn btn-dark">Xóa</a>
+                </td>
+            </tr>
+            {{/each}}
+        
+        </tbody>
+    </table>
+</div>

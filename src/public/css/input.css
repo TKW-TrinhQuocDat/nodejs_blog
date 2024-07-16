@@ -12,4 +12,24 @@ h3 {
   color: blue;
 }
 
+.card-courses {
+  margin-top: 16px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+img.stored-img {
+  width: 94px;
+  height: 60px;
+}
+
 /*# sourceMappingURL=input.css.map */

@@ -1,0 +1,28 @@
+<div class="mt-4">
+    <h1>Sửa bài Đăng</h1>
+
+    <form method="POST" action="/nhac/{{nhac._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="name" class="form-label" >Tên bài hát</label>
+            <input type="text" class="form-control" name="name" value="{{nhac.name}}" id="name" >
+        </div>
+          <div class="mb-3">
+            <label for="descr class="form-label"iption" >Mô tả</label>
+            <textarea type="text" class="form-control" name="description" id="description" >{{nhac.description}}</textarea>
+        </div>
+          <div class="mb-3">
+            <label for="video class="form-label"Id" >VideoId</label>
+            <input type="text" class="form-control" name="videoId" value="{{nhac.videoId}}" id="videoId" >
+        </div>
+          <div class="mb-3">
+            <label for="level class="form-label"" >Trình Độ</label>
+            <input type="text" class="form-control" name="level" value="{{nhac.level}}" id="level" >
+        </div>
+
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">Lưu lại</button>
+        </div>
+    </form>
+    
+
+</div>
